@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--bg:#f6f8f4;--card:#fff;--ink:#14261e;--mute:#5b6e64;--em:#0b6b4b;--gold:#b8892b;--line:#dde6df;--soft:#e8f2ec}
+.dark{--bg:#0b1612;--card:#12231c;--ink:#e8f1ec;--mute:#93a99d;--em:#1f9f73;--gold:#e0b657;--line:#21382d;--soft:#16302a}
+html{scroll-behavior:smooth}
+body{@apply bg-bg font-sans text-ink transition-colors duration-300}
+@layer components{
+  .btn{@apply cursor-pointer rounded-xl border border-line bg-card px-3 py-2 transition hover:border-em}
+  .btn-p{@apply cursor-pointer rounded-xl border border-em bg-em px-3 py-2 text-white transition hover:opacity-90}
+  .card{@apply rounded-2xl border border-line bg-card p-4}
+  .ico{@apply h-9 w-9 cursor-pointer rounded-full bg-soft transition hover:scale-110}
+  .input{@apply w-full rounded-xl border-2 border-line bg-card px-4 py-3 outline-none focus:border-em}
+}
+.ar{direction:rtl;text-align:right;line-height:2.1}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
